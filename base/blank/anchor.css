@@ -1,0 +1,7 @@
+@layer reset, default, theme, layout;
+
+@import '../src/css/reset.css' layer(reset);
+@import '../src/css/default.css' layer(default);
+@import '../src/css/theme/theme.css' layer(theme);
+@import '../src/css/theme/dark-theme.css' layer(theme);
+@import './layout.css' layer(layout);

@@ -1,0 +1,32 @@
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+main {
+  > section {
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    scroll-snap-align: center;
+
+    div:first-child {
+      padding: 5vh 5vw;
+    }
+  }
+
+  @media (aspect-ratio < 1/2) {
+    section {
+      height: auto;
+    }
+  }
+}

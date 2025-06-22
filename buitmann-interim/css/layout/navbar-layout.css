@@ -1,0 +1,17 @@
+nav:first-of-type {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  z-index: 100;
+  box-shadow: var(--box-shadow);
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 2vw;
+    gap: 2rem;
+  }
+}

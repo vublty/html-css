@@ -1,0 +1,13 @@
+:root {
+  color-scheme: light dark;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary-accent-color);
+  outline-offset: 2px;
+}
+
+* {
+  text-wrap: balance;
+  hyphens: auto;
+}

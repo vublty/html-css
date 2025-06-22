@@ -1,0 +1,46 @@
+@layer reset, default, theme, layout;
+
+@import './css/reset.css' layer(reset);
+@import './css/default.css' layer(default);
+@import './css/layout/site-layout.css' layer(layout);
+@import './css/layout/navbar-layout.css' layer(layout);
+@import './css/layout/container/hero-layout.css' layer(layout);
+@import './css/layout/container/con-layout.css' layer(layout);
+@import './css/theme/theme.css' layer(theme);
+@import './css/theme/dark-theme.css' layer(theme);
+
+/* Dev helping formating */
+section {
+  &:nth-child(odd) {
+    background-color: rgb(27, 49, 193);
+  }
+
+  &:nth-child(even) {
+    background-color: rgb(193, 27, 27);
+  }
+}
+
+@media (aspect-ratio > 2/1) {
+  section {
+    &:nth-child(odd) {
+      background-color: rgb(225, 143, 28);
+    }
+
+    &:nth-child(even) {
+      background-color: rgb(108, 15, 91);
+    }
+  }
+}
+
+@media (aspect-ratio < 1/2) {
+  section {
+    &:nth-child(odd) {
+      background-color: rgb(38, 72, 73);
+    }
+
+    &:nth-child(even) {
+      background-color: rgb(17, 137, 17);
+    }
+  }
+}
+/* End of dev helping formating */

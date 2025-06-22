@@ -1,0 +1,23 @@
+:root {
+  html, body {
+    accent-color: var(--primary-accent-color);
+  }
+  --base-navbar-height: 4rem;
+  --base-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --base-primary-color: #ff6347;
+  --base-primary-accent-color: #ff6347;
+  --base-secondary-color: #6c757d;
+  --base-secondary-accent-color: oklch(0.841 0.238 128.85);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--base-primary-color);
+  aspect-ratio: 1;
+  padding: 1em;
+  border-radius: 100%;
+}
