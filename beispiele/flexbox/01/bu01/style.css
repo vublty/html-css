@@ -1,0 +1,93 @@
+:root {
+  --gap: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: oklch(0.696 0.196 32.321 / .25);
+}
+
+.some-page-wrapper {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  max-width: 900px;
+}
+
+.row > div {
+  box-sizing: border-box;
+  max-height: 290px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+}
+
+.w-full-2 {
+  aspect-ratio: calc(2 + var(--gap));
+
+  &.even > div {
+    flex: 1 1 calc(50%);
+    aspect-ratio: 1.5;
+    background: lightgreen;
+  }
+
+  &.square-rest > div {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: lightcoral;
+
+    &:first-child {
+      flex: 1 1 calc(33.33% - var(--gap)/2);
+      aspect-ratio: 1;
+
+      & > img {
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &:last-child {
+      flex: 1 1 66.66%;
+
+      & > img {
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.w-full-3 {
+  aspect-ratio: calc(3 + 2 * var(--gap));
+
+  &.even > div {
+    flex: 1 1 calc(33.33%);
+    aspect-ratio: 1;
+    background: lightblue;
+  }
+}
+
+.col-33 {
+  flex: 1 1 31.33%;
+}
+
+.col-66 {
+  flex: 1 1 65.66%;
+}

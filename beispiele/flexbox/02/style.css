@@ -1,0 +1,65 @@
+:root {
+  --vublty-page-w: 900px;
+  --vublty-gap: calc(10px + 1vw);
+  --vublty-bg-color: oklch(0.696 0.196 122.321 / .2);
+}
+
+body {
+  margin: 0;
+  padding: var(--vublty-gap) 0;
+  height: calc(100vh - var(--vublty-gap) * 2);
+  background: var(--vublty-bg-color);
+}
+
+.page-w {
+  max-width: var(--vublty-page-w);
+  margin: 0 auto;
+  min-height: 100%;
+  background: oklch(from var(--vublty-bg-color) l c h / calc(alpha + .2));
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vublty-gap);
+  margin-bottom: var(--vublty-gap);
+
+  & > .flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--vublty-gap);
+    aspect-ratio: 2.8;
+
+    & > * {
+      flex: 1 1;
+      background: oklch(from var(--vublty-bg-color) l c h / calc(alpha + .4));
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.sq1 {
+      & > *:first-child {
+        flex: 0 0;
+        aspect-ratio: 1;
+      }
+    }
+
+    &.sq2 {
+      & > *:nth-child(2) {
+        flex: 0 0;
+        aspect-ratio: 1;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    & > .flex-row {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
